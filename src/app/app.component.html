@@ -1,0 +1,16 @@
+<h3>Gropuped Scattered Chart</h3>
+<p>{{clickedNodedata}}</p>
+<app-d3-scattered-chart 
+    [data]="chartConfig.chartData" 
+    [svgBgColor]="chartConfig.svgBgColor"
+    [svgWidth]="chartConfig.svgWidth" 
+    [svgHeigth]="chartConfig.svgHeigth" 
+    [groupNames]="chartConfig.groupNames"
+    [groupColors]="chartConfig.groupColors" 
+    [xAxisLabel]="chartConfig.xAxisLabel" 
+    [yAxisLabel]="chartConfig.yAxisLabel"
+    [showBorder]="chartConfig.showBorder" 
+    [circleRadius]="chartConfig.circleRadius"
+    [displayYaxis]="chartConfig.displayYaxis"
+    [displayXaxis]="chartConfig.displayXaxis" (bubbleClick)="onBubbleClick($event)">
+</app-d3-scattered-chart>
