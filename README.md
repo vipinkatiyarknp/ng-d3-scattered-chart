@@ -5,7 +5,7 @@ Angular + D3 Reusable Scattered Chart Component
 
 ### Demo
 
-   * Application live demo [https://nostalgic-northcutt-0522ad.netlify.com](https://nostalgic-northcutt-0522ad.netlify.com).
+   * Application live demo [https://ng-d3-scattered-chart.herokuapp.com/](https://ng-d3-scattered-chart.herokuapp.com/).
 
 #### How to use it in your project
 > download it from npm
