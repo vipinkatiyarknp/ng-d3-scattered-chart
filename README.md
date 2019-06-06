@@ -14,12 +14,18 @@ Angular + D3 Reusable Scattered Chart Component
 npm install ng-d3-scattered-chart --save
 ```
 
-use the scattered Chart module in your project, at any module, you just need to imports into your module:
+use the scattered Chart Component in your project, you just need to imports into your module;
+
 ```es6
-import { D3ScatteredComponent } from 'ng-d3-scattered-chart'
+import { D3ScatteredComponent } from 'ng-d3-scattered-chart';
 ```
 
-easy to use the directive, just add it in a html tag, such as:
+Add the data model in the componet code file to add the data 
+```es6
+import * as chartModel from './d3-scattered-chart/d3.scattered.chart.model';
+```
+
+Add it in a html tag in component file, such as:
 ```
 <app-d3-scattered-chart 
     [data]="chartConfig.chartData" 
@@ -34,7 +40,27 @@ easy to use the directive, just add it in a html tag, such as:
     [circleRadius]="chartConfig.circleRadius"
     [displayYaxis]="chartConfig.displayYaxis"
     [displayXaxis]="chartConfig.displayXaxis" 
-    (bubbleClick)="onBubbleClick($event)">
+    (bubbleClick)="onBubbleClick($event)"></app-d3-scattered-chart >
+
+```
+
+Add the config in component code file, such as:
+```
+chartConfig = {
+    svgBgColor: 'transparent',
+    showBorder: true,
+    displayYaxis: true,
+    displayXaxis: true,
+    svgWidth: 520,
+    svgHeigth: 520,
+    circleRadius: 5,
+    xAxisLabel: 'Spetal Length',
+    yAxisLabel: 'Petal Length',
+    groupNames: ['setosa', 'versicolor', 'virginica'],
+    groupColors: ['#F8766D', '#00BA38', '#619CFF'],
+    chartData: chartModel.chartData
+}
+
 ```
 
 #### Properties
@@ -58,7 +84,10 @@ easy to use the directive, just add it in a html tag, such as:
 ### method
 
 ```
-bubbleClick(data)
+onBubbleClick(data) {
+    this.clickedNodedata = `Node group name: ${data.Species}, Node Node Petal Length:${data.Petal_Length}, Node group Spetal Length:${data.Sepal_Length}`;
+    console.log(data);
+  }
 ```
 
 it will return the data of the node you clicked !!!

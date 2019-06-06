@@ -1,6 +1,13 @@
 {
   "name": "ng-d3-scattered-chart",
-  "version": "1.0.5",
+  "version": "1.0.8",
+  "description": "Angular + D3 Scattered Chart",
+  "author": "Vipin Katiyar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vipinkatiyarknp/ng-d3-scattered-chart"
+  },
+  "keywords": ["angular7, D3scatteredchart, ngd3scatteredchart"],
   "license": "MIT",
   "scripts": {
     "ng": "ng",
